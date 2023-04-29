@@ -19,31 +19,14 @@ struct MainView: View {
         case .message:
             return AnyView(Color.yellow)
         case .profile:
-            return AnyView(Text("Fire"))
+            return AnyView(ProfileView())
         }
     }
+    
     var body: some View {
         ZStack {
-            Color(.systemGray6).opacity(0.35).ignoresSafeArea()
-            
-            VStack {
-                HStack {
-                    Spacer()
-                    TabBarButtonView(type: .fire)
-                    Spacer()
-                    TabBarButtonView(type: .star)
-                    Spacer()
-                    TabBarButtonView(type: .message)
-                    Spacer()
-                    TabBarButtonView(type: .profile)
-                    Spacer()
-                }
-                .frame(height: 100.0)
-                .padding(.top, 30.0)
-                correctViewForState()
-                Spacer()
-            }
-            .ignoresSafeArea()
+            Color.defaultBackground.ignoresSafeArea()
+            views
         }
     }
 }
@@ -52,5 +35,28 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .environmentObject(AppStateManager())
+    }
+}
+
+extension MainView {
+    var views: some View {
+        VStack {
+            HStack {
+                Spacer()
+                TabBarButtonView(type: .fire)
+                Spacer()
+                TabBarButtonView(type: .star)
+                Spacer()
+                TabBarButtonView(type: .message)
+                Spacer()
+                TabBarButtonView(type: .profile)
+                Spacer()
+            }
+            .frame(height: 100.0)
+            .padding(.top, 30.0)
+            correctViewForState()
+            Spacer()
+        }
+        .ignoresSafeArea()
     }
 }

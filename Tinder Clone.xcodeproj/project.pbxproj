@@ -15,6 +15,10 @@
 		EE4133E629FD2ABF008D5BCB /* TabBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4133E529FD2ABF008D5BCB /* TabBarButtonView.swift */; };
 		EE4133EA29FD31B8008D5BCB /* AppStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4133E929FD31B8008D5BCB /* AppStateManager.swift */; };
 		EE4133EC29FD3389008D5BCB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4133EB29FD3389008D5BCB /* Extensions.swift */; };
+		EE4133F229FD3C37008D5BCB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4133F129FD3C37008D5BCB /* ProfileView.swift */; };
+		EE4133F429FD3DC7008D5BCB /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4133F329FD3DC7008D5BCB /* RoundedImage.swift */; };
+		EE4133F729FD4887008D5BCB /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4133F629FD4887008D5BCB /* ProfileButton.swift */; };
+		EE4133F929FD4E11008D5BCB /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4133F829FD4E11008D5BCB /* ProfileSwipePromo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		EE4133E529FD2ABF008D5BCB /* TabBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonView.swift; sourceTree = "<group>"; };
 		EE4133E929FD31B8008D5BCB /* AppStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateManager.swift; sourceTree = "<group>"; };
 		EE4133EB29FD3389008D5BCB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EE4133F129FD3C37008D5BCB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EE4133F329FD3DC7008D5BCB /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		EE4133F629FD4887008D5BCB /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
+		EE4133F829FD4E11008D5BCB /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,8 @@
 				EE4133E929FD31B8008D5BCB /* AppStateManager.swift */,
 				EE4133EE29FD3887008D5BCB /* App */,
 				EE4133ED29FD386A008D5BCB /* MainTabBar */,
+				EE4133F029FD3C28008D5BCB /* Profile */,
+				EE4133F529FD3E86008D5BCB /* HelpersView */,
 				EE4133EF29FD38FE008D5BCB /* Extension */,
 				EE4133D929FD281F008D5BCB /* Assets.xcassets */,
 				EE4133DB29FD281F008D5BCB /* Preview Content */,
@@ -101,6 +111,24 @@
 				EE4133EB29FD3389008D5BCB /* Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		EE4133F029FD3C28008D5BCB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EE4133F129FD3C37008D5BCB /* ProfileView.swift */,
+				EE4133F829FD4E11008D5BCB /* ProfileSwipePromo.swift */,
+				EE4133F629FD4887008D5BCB /* ProfileButton.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EE4133F529FD3E86008D5BCB /* HelpersView */ = {
+			isa = PBXGroup;
+			children = (
+				EE4133F329FD3DC7008D5BCB /* RoundedImage.swift */,
+			);
+			path = HelpersView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,10 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE4133E629FD2ABF008D5BCB /* TabBarButtonView.swift in Sources */,
+				EE4133F429FD3DC7008D5BCB /* RoundedImage.swift in Sources */,
 				EE4133EC29FD3389008D5BCB /* Extensions.swift in Sources */,
+				EE4133F729FD4887008D5BCB /* ProfileButton.swift in Sources */,
 				EE4133D829FD281E008D5BCB /* ContentView.swift in Sources */,
 				EE4133E429FD290D008D5BCB /* MainView.swift in Sources */,
+				EE4133F929FD4E11008D5BCB /* ProfileSwipePromo.swift in Sources */,
 				EE4133D629FD281E008D5BCB /* Tinder_CloneApp.swift in Sources */,
+				EE4133F229FD3C37008D5BCB /* ProfileView.swift in Sources */,
 				EE4133EA29FD31B8008D5BCB /* AppStateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

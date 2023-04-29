@@ -7,18 +7,25 @@
 
 import SwiftUI
 
-enum TabBarButtonType: String {
-    case fire = "flame.fill"
-    case star = "star.fill"
-    case message = "message.fill"
-    case profile = "person.fill"
-}
-
 struct TabBarButtonView: View {
     var type: TabBarButtonType
     @EnvironmentObject var appState: AppStateManager
     
     var body: some View {
+        mainButton
+    }
+}
+
+
+struct TabBarButtonView_Previews: PreviewProvider {
+    static var previews: some View {
+        TabBarButtonView(type: .fire)
+            .environmentObject(AppStateManager())
+    }
+}
+
+extension TabBarButtonView {
+    var mainButton: some View {
         Button {
             appState.selectedTab = type
         } label: {
@@ -34,10 +41,10 @@ struct TabBarButtonView: View {
     }
 }
 
-
-struct TabBarButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBarButtonView(type: .fire)
-            .environmentObject(AppStateManager())
-    }
+enum TabBarButtonType: String {
+    case fire = "flame.fill"
+    case star = "star.fill"
+    case message = "message.fill"
+    case profile = "person.fill"
 }
+
