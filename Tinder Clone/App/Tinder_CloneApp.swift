@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Tinder_CloneApp: App {
+    @StateObject var manager: AppStateManager = AppStateManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(manager)
         }
     }
 }
