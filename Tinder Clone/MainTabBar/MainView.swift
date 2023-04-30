@@ -17,16 +17,19 @@ struct MainView: View {
         case .star:
             return AnyView(Color.red)
         case .message:
-            return AnyView(Color.yellow)
+            return AnyView(MessageListView())
         case .profile:
             return AnyView(ProfileView())
         }
     }
     
     var body: some View {
-        ZStack {
-            Color.defaultBackground.ignoresSafeArea()
-            views
+        NavigationView {
+            ZStack {
+                Color.defaultBackground.ignoresSafeArea()
+                views
+            }
+            .modifier(HideNavigationView())
         }
     }
 }

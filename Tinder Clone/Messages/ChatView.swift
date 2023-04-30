@@ -37,6 +37,7 @@ struct ChatView: View {
         .onChange(of: chatManager.messages) { _ in
             scrollToBottom()
         }
+        .modifier(HideNavigationView())
     }
     
     func sendMessgage() {

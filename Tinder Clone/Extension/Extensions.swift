@@ -26,3 +26,20 @@ extension Color {
     static let textSecondary = Color(.gray).opacity(0.6)
     static let textFieldBG = Color(.systemGray6)
 }
+
+
+extension View {
+    func endEditing(_ force: Bool) {
+        UIApplication.shared.windows.forEach {
+            $0.endEditing(force)
+        }
+    }
+}
+
+struct HideNavigationView: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .navigationTitle("")
+            .navigationBarBackButtonHidden(true)
+    }
+}

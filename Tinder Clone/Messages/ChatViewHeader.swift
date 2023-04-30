@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChatViewHeader: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var pre
     let name: String
     let imageURL: URL?
     let videoAction: () -> ()
@@ -36,7 +36,7 @@ extension ChatViewHeader {
     var header: some View {
         HStack {
             Button {
-                dismiss()
+                pre.wrappedValue.dismiss()
             } label: {
                 Image(systemName: "chevron.left")
                     .foregroundColor(.textPrimary)
