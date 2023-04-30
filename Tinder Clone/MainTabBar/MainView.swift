@@ -15,7 +15,7 @@ struct MainView: View {
         case .fire:
             return AnyView(Text("Fire")) // AnyView means it can any type of view
         case .star:
-            return AnyView(Color.red)
+            return AnyView(MatchesView())
         case .message:
             return AnyView(MessageListView())
         case .profile:
@@ -38,6 +38,7 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .environmentObject(AppStateManager())
+            .environmentObject(UserManager())
     }
 }
 

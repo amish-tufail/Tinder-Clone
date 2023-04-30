@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct Tinder_CloneApp: App {
     @StateObject var manager: AppStateManager = AppStateManager()
+    @StateObject var userManager: UserManager = UserManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(manager)
+                .environmentObject(UserManager())
         }
     }
 }

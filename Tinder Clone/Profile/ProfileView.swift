@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject var appState: AppStateManager
+    
+    var user: User {
+        return userManager.currentUser
+    }
+    
     var body: some View {
         VStack(spacing: 0.0) {
             topSection
@@ -29,13 +36,15 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+            .environmentObject(UserManager())
+            .environmentObject(AppStateManager())
     }
 }
 
 extension ProfileView {
     var topSection: some View {
         ZStack(alignment: .topTrailing) {
-            RoundedImage(url: URL(string: "https://picsum.photos/400"))
+            RoundedImage(url: user.imageURLS.first)
             Button {
                 
             } label: {
@@ -56,11 +65,11 @@ extension ProfileView {
     
     var detailSection: some View {
         Group {
-            Text("Amish, 21")
+            Text("\(user.name), \(user.age)")
                 .foregroundColor(.textTitle)
                 .font(.system(size: 26.0, weight: .medium))
             Spacer().frame(height: 8.0)
-            Text("Software Engineer")
+            Text(user.jobTitle)
         }
     }
     
@@ -105,7 +114,7 @@ extension ProfileView {
         ZStack {
             Color.gray.opacity(0.18)
             ProfileSwipePromo() {
-                
+                appState.showPurchaseScreen()
             }
         }
     }
