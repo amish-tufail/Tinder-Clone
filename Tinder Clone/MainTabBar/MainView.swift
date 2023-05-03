@@ -28,6 +28,12 @@ struct MainView: View {
             ZStack {
                 Color.defaultBackground.ignoresSafeArea()
                 views
+                if appState.showPurchasePopup {
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.5)) {
+                        PurchasePopup(isVisible: $appState.showPurchasePopup)
+                            .transition(.offset(y: 800.0))
+                    }
+                }
             }
             .modifier(HideNavigationView())
         }
