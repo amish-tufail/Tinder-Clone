@@ -13,7 +13,7 @@ struct MainView: View {
     func correctViewForState() -> some View {
         switch appState.selectedTab {
         case .fire:
-            return AnyView(Text("Fire")) // AnyView means it can any type of view
+            return AnyView(CardImageScroller(person: Person.example)) // AnyView means it can any type of view
         case .star:
             return AnyView(MatchesView())
         case .message:

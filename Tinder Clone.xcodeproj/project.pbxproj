@@ -39,6 +39,7 @@
 		EE4134222A02D951008D5BCB /* PurchaseSwipsPromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4134212A02D951008D5BCB /* PurchaseSwipsPromo.swift */; };
 		EE4134252A02DAF4008D5BCB /* PurchaseOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4134242A02DAF4008D5BCB /* PurchaseOptionView.swift */; };
 		EE4134272A02DB13008D5BCB /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4134262A02DB13008D5BCB /* Subscription.swift */; };
+		EE6060BB2A0634A600B99B7E /* CardImageScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6060BA2A0634A600B99B7E /* CardImageScroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		EE4134212A02D951008D5BCB /* PurchaseSwipsPromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSwipsPromo.swift; sourceTree = "<group>"; };
 		EE4134242A02DAF4008D5BCB /* PurchaseOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseOptionView.swift; sourceTree = "<group>"; };
 		EE4134262A02DB13008D5BCB /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		EE6060BA2A0634A600B99B7E /* CardImageScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageScroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				EE41340229FD6AFD008D5BCB /* Messages */,
 				EE41341529FE1D79008D5BCB /* MatchesView */,
 				EE41341E2A02D495008D5BCB /* Popups */,
+				EE6060B92A06348E00B99B7E /* Card */,
 				EE4133F529FD3E86008D5BCB /* HelpersView */,
 				EE4133EF29FD38FE008D5BCB /* Extension */,
 				EE4133D929FD281F008D5BCB /* Assets.xcassets */,
@@ -239,6 +242,14 @@
 			path = Purchase;
 			sourceTree = "<group>";
 		};
+		EE6060B92A06348E00B99B7E /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				EE6060BA2A0634A600B99B7E /* CardImageScroller.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,6 +340,7 @@
 				EE41340829FD6E62008D5BCB /* ChatManager.swift in Sources */,
 				EE41341929FE1F3A008D5BCB /* PersonSquare.swift in Sources */,
 				EE41341029FE0C9C008D5BCB /* MessageRowView.swift in Sources */,
+				EE6060BB2A0634A600B99B7E /* CardImageScroller.swift in Sources */,
 				EE41341729FE1D87008D5BCB /* LikesView.swift in Sources */,
 				EE41340629FD6E0F008D5BCB /* ChatView.swift in Sources */,
 				EE4133FE29FD69A2008D5BCB /* Person.swift in Sources */,
